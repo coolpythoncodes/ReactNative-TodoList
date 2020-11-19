@@ -1,10 +1,11 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StatusBar, Image, StyleSheet, Text, View } from 'react-native';
 import welcomeScreenImage from '../assests/login.png';
 
 const WelcomeScreen = () => {
     return (
         <View style={styles.container}>
+            <StatusBar backgroundColor='#fff' barStyle='dark-content'/>
             <View>
                 <Image source={welcomeScreenImage} />
             </View>
