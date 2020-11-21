@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import AddButton from './AddButton';
+import BottomLine from './BottomLine';
 import Home from './HomeButton';
 import TaskButton from './TaskButton';
 
@@ -11,8 +12,10 @@ const FooterBar = () => {
             <Home />
             <View style={styles.addButtonStyle}>
                 <AddButton />
+                <BottomLine />
             </View>
             <TaskButton style={{marginTop:-30}} />
+
         </View>
     );
 }
@@ -26,7 +29,9 @@ const styles = StyleSheet.create({
     },
     addButtonStyle:{
         marginTop:-60,
-        
+        flexDirection:'column',
+        justifyContent:'space-between',
+        height:137,        
     },
 })
 

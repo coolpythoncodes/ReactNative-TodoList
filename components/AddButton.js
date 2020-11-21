@@ -10,12 +10,5 @@ const AddButton = () => {
     );
 }
 
-// const styles = StyleSheet.create({
-
-//     addButton: {
-//         backgroundColor: 'red',
-//         marginTop: -30,
-//     }
-// })
 
 export default AddButton;
