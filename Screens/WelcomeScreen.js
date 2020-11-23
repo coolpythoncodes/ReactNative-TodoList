@@ -1,8 +1,15 @@
-import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import React, { useEffect } from 'react';
 import { StatusBar, Image, StyleSheet, Text, View } from 'react-native';
 import welcomeScreenImage from '../assests/login.png';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate('NoTodo')
+        }, 3000)
+    },[])
+
     return (
         <View style={styles.container}>
             <StatusBar backgroundColor='#fff' barStyle='dark-content'/>

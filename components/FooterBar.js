@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import AddButton from './AddButton';
 import BottomLine from './BottomLine';
 import Home from './HomeButton';
