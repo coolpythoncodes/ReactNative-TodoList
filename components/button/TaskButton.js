@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const TaskButton = () => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.7}>
             <Icon name='tasks' size={25} color='#6074F9' />
             <Text style={{
                 color: '#6074F9'
