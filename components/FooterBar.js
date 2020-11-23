@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import AddButton from './AddButton';
+import AddButton from './button/AddButton';
 import BottomLine from './BottomLine';
-import Home from './HomeButton';
-import TaskButton from './TaskButton';
+import Home from './button/HomeButton';
+import TaskButton from './button/TaskButton';
 
 const FooterBar = () => {
     return (
