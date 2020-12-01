@@ -1,9 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const HeaderBar = ({ todos }) => {
+const HeaderBar = ({ height, addTodo }) => {
+    const containerStyles = [styles.container];
+    if (height) {
+        containerStyles.push({height: height});
+      }
+
     return (
-        <View style={styles.container}>
+        <View style={containerStyles}>
             <Text style={styles.heading}>
                 Hello Pal
             </Text>
@@ -18,10 +23,10 @@ const HeaderBar = ({ todos }) => {
 const styles = StyleSheet.create({
     container:{
         backgroundColor:'#6074F9',
-        height:80,
-        justifyContent:'center',
+        height:100,
         paddingStart:15,
         color:'#fff',
+        paddingTop:20,
     },
     heading:{
         color:'#fff',
