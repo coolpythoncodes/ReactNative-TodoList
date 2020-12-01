@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import WelcomeScreen from './Screens/WelcomeScreen';
-import NoTodoScreen from './Screens/NoTodoScreen';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
+
+import WelcomeScreen from './Screens/WelcomeScreen';
+import NoTodoScreen from './Screens/NoTodoScreen';
+import AddTodoScreen from './Screens/AddTodoScreen';
+
 
 const Stack = createStackNavigator();
 
 const App = () => {
-
   const [todos, setTodos] = useState([
     {
       id: Math.random(),
@@ -38,16 +41,18 @@ const App = () => {
           name="Welcome" 
           component={WelcomeScreen} 
         />
-        <Stack.Screen name="NoTodo" component={NoTodoScreen} />
+        <Stack.Screen 
+          name="NoTodo" 
+          component={NoTodoScreen} 
+        />
+        <Stack.Screen 
+          name="AddTodo" 
+          component={AddTodoScreen} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
        
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  }
-})
 export default App;
