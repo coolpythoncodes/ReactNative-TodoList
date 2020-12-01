@@ -6,7 +6,7 @@ import welcomeScreenImage from '../assests/login.png';
 const WelcomeScreen = ({ navigation }) => {
     useEffect(() => {
         setTimeout(() => {
-            navigation.navigate('NoTodo')
+            navigation.replace('NoTodo')
         }, 3000)
     },[])
 
