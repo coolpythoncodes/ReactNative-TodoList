@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from './Screens/WelcomeScreen';
 import NoTodoScreen from './Screens/NoTodoScreen';
 import AddTodoScreen from './Screens/AddTodoScreen';
+import TaskCategories from './Screens/TasksCategories';
 
 
 const Stack = createStackNavigator();
@@ -48,6 +49,10 @@ const App = () => {
         <Stack.Screen 
           name="AddTodo" 
           component={AddTodoScreen} 
+        />
+        <Stack.Screen
+          name='TaskCategories'
+          component={TaskCategories}
         />
       </Stack.Navigator>
     </NavigationContainer>

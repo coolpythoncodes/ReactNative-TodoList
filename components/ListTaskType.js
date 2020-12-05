@@ -7,9 +7,7 @@ const screenWidth = Math.round(Dimensions.get('window').width);
 
 const ListTaskType = () => {
     return (
-        // <View style={styles.container}>
             <ScrollView 
-            // contentContainerStyle={styles.contentContainer}
             horizontal
             showsHorizontalScrollIndicator={false}
             >
@@ -19,7 +17,6 @@ const ListTaskType = () => {
                 <TaskType backgroundColor='#3044F2' task='Study' />
                 <TaskType backgroundColor='#F29130' task='Shopping' />
             </ScrollView>
-        //  </View>
     );
 }
 
