@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Button, Platform } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import CancelButton from '../components/button/CancelButton';
 import Layout from '../components/Layout';
 import ListTaskType from '../components/ListTaskType';
+import AddTaskButton from '../components/button/AddTaskButton';
+
 
 const AddTodoScreen = () => {
   const [date, setDate] = useState(new Date(1598051730000));
@@ -43,12 +45,18 @@ const AddTodoScreen = () => {
     >
       <View style={styles.container}>
 
-        <View style={{ marginHorizontal: 40, }}>
-          <CancelButton style={{
+        <View 
+          style={{ 
+            marginHorizontal: 40, 
+            }}
+          >
+          <CancelButton 
+            style={{
             marginTop: -40, 
             alignSelf: 'center', 
             zIndex: 999, }} 
           />
+
           <TextInput
             autoFocus={true}
             style={{ 
@@ -68,7 +76,13 @@ const AddTodoScreen = () => {
             width:175 
             }}
           >
-            <Text style={{fontSize:20}}>Choose a date</Text>
+            <Text 
+              style={{
+                fontSize:20
+                }}
+            >
+              Choose a date
+            </Text>
             <Icon
               name='chevron-down' 
               size={20} 
@@ -95,8 +109,31 @@ const AddTodoScreen = () => {
               fontWeight:'bold', 
               marginTop:20}}
             >
-              {formatDate(date)}</Text>
+              {formatDate(date)}
+            </Text>
           </View>
+          <AddTaskButton
+            title='Add task'
+          />
+          {/* <TouchableOpacity
+            activeOpacity={0.8}
+            style={{
+              backgroundColor:'#7EB6FF',
+              paddingVertical: 20,
+              borderRadius:10,
+              marginTop:100,
+            }}
+        >
+            <Text
+              style={{
+                color:'#fff',
+                fontSize:18,
+                textAlign:'center'
+              }}
+            >
+               Add Task
+            </Text>
+        </TouchableOpacity> */}
         </View>
       </View>
     </Layout >
