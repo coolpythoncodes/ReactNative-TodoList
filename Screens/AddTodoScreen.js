@@ -112,28 +112,7 @@ const AddTodoScreen = () => {
               {formatDate(date)}
             </Text>
           </View>
-          <AddTaskButton
-            title='Add task'
-          />
-          {/* <TouchableOpacity
-            activeOpacity={0.8}
-            style={{
-              backgroundColor:'#7EB6FF',
-              paddingVertical: 20,
-              borderRadius:10,
-              marginTop:100,
-            }}
-        >
-            <Text
-              style={{
-                color:'#fff',
-                fontSize:18,
-                textAlign:'center'
-              }}
-            >
-               Add Task
-            </Text>
-        </TouchableOpacity> */}
+          <AddTaskButton title='Add task'/>
         </View>
       </View>
     </Layout >

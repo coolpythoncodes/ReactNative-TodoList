@@ -13,7 +13,7 @@ const FooterBar = () => {
                 <AddButton />
                 <BottomLine />
             </View>
-            <TaskButton style={{marginTop:-30}} />
+            <TaskButton />
 
         </View>
     );
@@ -27,10 +27,11 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
     },
     addButtonStyle:{
-        marginTop:-60,
+        marginTop:-50,
         flexDirection:'column',
         justifyContent:'space-between',
-        height:137,        
+        height:137,
+        zIndex:9999,
     },
 })
 
